@@ -1,0 +1,111 @@
+# Cahier des Charges - Application de Gestion de Plans de Table
+
+## Résumé du Projet
+
+L'objectif de ce projet est de développer une application interactive permettant de créer des plans de table. L'application doit offrir une interface intuitive pour positionner graphiquement des tables et des chaises dans un espace défini, gérer une liste de personnes, et assigner ces personnes aux chaises.
+
+---
+
+## Fonctionnalités Principales
+
+### Gestion des Éléments Graphiques
+
+1. **Tables**
+
+   - Ajout de tables carrées, rectangles ou rondes avec un numéro écrit au centre, qui commence par 1, qui s'incrémente à chaque ajout de table.
+   - Les tables peuvent être redimensionnées. La taille initiale doit être du double des chaises, mais pas plus de 5cm de côté, ou 5cm de diagonale dans le cas d'une table ronde. 
+   - Déplacement libre des tables dans un espace défini. 
+   - Lors du déplacement d'une table (par un drag'n'drop, la table se positionne là ou le curseur de trouve au moment du drop)
+
+2. **Chaises**
+
+   - Ajout de chaises rondes.
+   - En cliquant sur une chaise, un bouton apparait dans un menu en haut du canvas pour changer l'icone de la chaise en fauteil roulant, et en chaise si l'icone courante est une chaise roulante. 
+   - Déplacement libre des chaises dans l'espace défini.
+   - La couleur de la chaise est la même que celle de la personne (défini lors de la création de la personne). 
+   - Un clique sur une chaise ouvre une liste déroulante de personnes non assignées à une chaise, avec possibilité d'en selectionner une, dont après validation, le nom sera alors affiché sur la chaise. 
+   - Lors d'un passage avec le curseur, l'image associé à la personne doit s'afficher et disparaitre une fois que le curseur n'est plus positionné sur la chaise. 
+
+---
+
+### Gestion des Personnes
+
+1. **Ajout de Personnes**
+
+   - Formulaire pour ajouter des personnes avec un champ pour le nom.
+   - Le formulaire contient un bouton radio pour spécifier si la personne et de sexe masculin ou féminin
+   - Dans la liste, une couleur représente le sexe de chaque personne:
+     - Bleu pour les hommes.
+     - Rose pour les femmes.
+
+2. **Liste des Personnes**
+
+   - Affichage d'une liste des personnes ajoutées.
+   - Lorsqu'on clique sur une personne, une petite fenêtre apparait avec les détailles de cette personne. Il est alors possible de lui associer une photo. 
+
+3. **Assignation**
+
+   - Assignation des personnes aux chaises via un clic sur une chaise.
+   - Mise à jour visuelle du nom de la personne sur la chaise assignée.
+
+---
+
+## Interface Utilisateur
+
+1. ** Menu haut **
+
+Le menu du haut est plutôt discret, et sert de barre d'outil pour les fonctionnalités suivantes: 
+- Un bouton qui permet l'ajout d'une table ou d'une chaise 
+- Un bouton qui permet d'afficher soit les noms des personnes sur les chaises, soit leur photo
+- Un bouton qui permet de filtrer uniquement les personnes qui requiert une attention particulière en rapport avec leur diabète. 
+- Un bouton qui permet de gérer les évènements (qui sera détaillé plus loin).
+- Un bouton qui permet d'importer une configuration sous forme de fichier excel. 
+
+2. ** Menu de gauche
+
+Le menu de gauche sert à gérer la liste des personnes. 
+
+
+
+1. **Zone de Création**
+
+   - Espace visuel pour positionner les tables et les chaises.
+   - Fonctionnalité de glisser-déposer pour déplacer les éléments graphiques.
+
+2. **Liste des Personnes**
+
+   - Section dédiée affichant les personnes ajoutées.
+   - Possibilité de sélectionner une personne pour assignation.
+
+3. **Formulaire d'Ajout**
+
+   - Champ de saisie pour le nom.
+   - Confirmation du sexe via une interaction utilisateur.
+
+---
+
+## Contraintes Techniques
+
+1. **Compatibilité Navigateur**
+
+   - L'application doit être utilisable sur les navigateurs web modernes (Chrome, Firefox, Edge).
+
+2. **Précision des Positions**
+
+   - Les positions des tables et des chaises doivent correspondre exactement à la position du curseur lors du déplacement.
+
+3. **Gestion des Données**
+
+   - Les données des personnes, des tables, et des chaises doivent être gérées en mémoire pour cette version initiale.
+
+4. **Impression du plan de table**
+
+   - Un export PDF du plan de table doit être possible via un bouton en haut à gauche. Une fenêtre s'ouvre alors pour donner le choix de l'emplacement et le nom du fichier. 
+
+---
+
+## Objectifs Fonctionnels
+
+1. Faciliter l'organisation visuelle des plans de table.
+2. Offrir un retour visuel clair ea
+
